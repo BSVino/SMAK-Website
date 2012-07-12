@@ -29,7 +29,7 @@ require_once '_header.php';
 	</div>
 
 	<div class="feature">
-		<img class="featureicon" src='icon-speed.jpg' />
+		<img class="featureicon" src='icon-speed.png' />
 		<img class="featureheader" src="header-superfast.png" alt="Super Fast Parallelized Optimized Speed!" /><br />
 		We trained a team of multi-dimensional monkey programmers to randomly "smak" the code until it ran excessively fast, and it only took 1,265 years!
 	</div>
@@ -50,7 +50,7 @@ require_once '_header.php';
 
 <img id='frontbuypanel' usemap='#buypanelmap' src="smak-dlpanel.png" />
 <map name='buypanelmap'>
-	<area shape='rect' coords='100,232,210,267' href='http://getsmak.net/files/smak-install-2.0.0.exe' />
+	<area shape='rect' coords='10,130,290,200' href='http://getsmak.net/files/smak-install-2.0.0.exe' />
 </map>
 
 <br clear="right" />
