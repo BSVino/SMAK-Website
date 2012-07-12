@@ -5,7 +5,7 @@ require_once '../_header.php';
 
 <h1>SMAK User Manual</h1>
 
-<em>Version 1.0</em>
+<em>Version 2.0</em>
 
 <h2>Getting Started</h2>
 
@@ -15,7 +15,7 @@ require_once '../_header.php';
 
 <p class="manualfloatright"><img src="manual-filemenuopen.png" /></p>
 
-<p>To load a model, choose Open from the File menu. SMAK currently supports .obj, Silo .sia, and Collada .dae files. If you associate a file type with SMAK, then it can be opened by double-clicking the file. Files can also be opened by dragging them onto the SMAK icon on your desktop. If changes have been made in an external application, you can use the "Reload" feature at any time to load the model again from the hard drive. As of 1.6, the "Open Into..." feature can open a model into the current scene without closing the current model. SMAK is optimized to load very large models, with 1 million + polygons. Any model with over 10,000 polygons will be automatically made not visible while loading. These models can be made visible again by clicking on the visibility button in the scene tree, but beware as they may cause your rendering performance to decrease drastically.</p>
+<p>To load a model, choose Open from the File menu. As of SMAK 2.0, SMAK supports <a href="http://assimp.sourceforge.net/main_features_formats.html">any format listed here</a> and also Silo .sia files. If you associate a file type with SMAK, then it can be opened by double-clicking the file. Files can also be opened by dragging them onto the SMAK icon on your desktop. If changes have been made in an external application, you can use the "Reload" feature at any time to load the model again from the hard drive. As of 1.6, the "Open Into..." feature can open a model into the current scene without closing the current model. SMAK is optimized to load very large models, with 1 million + polygons.</p>
 
 <h3> Saving a model</h3>
 
@@ -104,20 +104,6 @@ se have been separated into different windows.</em></p>
 
 <p>Version beta 1.4 comes with new options. The <i>Ray Falloff</i> option controls how strong the occlusion of distant geometry is. Lower values cause higher falloff rates, meaning that only closeby geometry causes darker areas in the resulting AO map. Higher values allow more distant geometry to occlude. The falloff is exponential, and the value determines the distance at which the falloff is at 50%. It can also be set to "No falloff" which disables falloff entirely. The <i>Randomize rays</i> checkbox causes a slight random variation of each ray, resulting in a more grainy look to the AO map. Lower values of <i>Ray Density</i> will cause the graininess to increase. The <i>Ground occlusion</i> feature forces all exposures below a certain angle to be completely black, simulating the effect of the mesh sitting on the ground. This causes the parts of the model which face down to be shaded darker. Ground occlusion is subject to ray falloff, so if the effects of ground occlusion are not visible in raytrace mode, increasing the ray falloff may help.</p>
 
-<h3>Tri Distance Method</h3>
-
-<p>The Tri Distance method is somewhat faster than raytracing, but less accurate. For every texel in the resulting image, an algorithm is run that looks at the distance to other polygons in the scene and the angle at which that polygon meets its neighbors, to generate a shadow value. This method is the least accurate method, as it will not detect polygons which intersect but do not connect to each other. However it generates smooth, soft looking AO maps that may look good on some models.</p>
-
-<h3>Color AO Method</h3>
-
-<p class="manualfloatleft"><img src="manual-color.png" /></p>
-
-<p>The Color AO method is a special AO method that causes the texture colors of an object to bleed onto nearby surfaces. This is good for helping to light scenes or models with large, colorful surfaces, to help saturate the scene and give it depth. This method requires that a texture has already been made for that object.</p>
-
-<p>Color AO has its own tools panel. To open it, <strong>click the Color AO Panel button</strong> at the bottom of the window, or select <strong>Generate Color AO</strong> from the Tools menu.</p>
-
-<p>The Color AO method renders the scene from every texel of the resulting image, sampling all of the colors in that scene, and then applies averaging and smoothing to the result. This produces a map that is similar to regular AO maps, but reflects the colors of nearby textures more prominently than simple light/dark shading. The result is a map that bleeds bright colors into nearby regions, that can be easily combined with a regular AO map to produce pleasing, saturated shades. When generating Color AO maps, high resolution maps are usually unnecessary, since it combines additively with normal AO maps.</p>
-
 <h3>Best Practices and Tips</h3>
 
 <p>The best options for any particular AO map greatly depends on what kind of model is being generated. Some simple guidelines can be used to ensure the best possible quality output.</p>
@@ -131,6 +117,10 @@ se have been separated into different windows.</em></p>
 <p>&raquo; The "Randomize rays" feature can result in gritty-looking maps, and can be used to great effect to create a dirty look. It also serves to ameliorate the problem of lines appearing in an AO map next to walls and poles due to ray inaccuracies. Lower values of ray density will cause much rougher looking result maps, which higher values and higher resolutions reducing the gritty look.</p>
 
 <p>&raquo; Ground occlusion is best used for objects which will always be situated on the ground, or over dark bottomless pits.</p>
+
+<h2>Generating a Cavity Map</h2>
+
+<p>Cavity maps are generated from normal maps, so first you must have a normal map generated, either by the texture-to-normal method or by the Combo Map generator. If you use both then the normal maps are automatically combined, then the cavity map generator will use the combined result to generate the cavity map. Open the cavity map generator by selecting <strong>"Generate cavity from normal" from the Tools menu</strong>. Then select a material which has normal maps and click <strong>"Generate"</strong> and the cavity map will be generated and automatically applied to your model. You can save the map to your hard disk by pressing the "Save" button. Cavity maps should be applied using the "Overlay" layer blending mode in Photoshop or The GIMP.</p>
 
 <h2>"SMAK a Batch" Processing</h2>
 
