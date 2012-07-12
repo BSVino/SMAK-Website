@@ -25,11 +25,14 @@ require_once '_header.php';
 <li>Preview your models real-time in 3D and UV space.</li>
 <li>Generate ambient occlusion maps in less than a minute.</li>
 <li>Bake high-resolution model detail onto low-resolution meshes.</li>
+<li>Create cavity maps from normal maps.</li>
 </ul>
 
-<p>Download SMAK for free by clicking the "Free Download" button. SMAK is free and open-source as of version 2.0. </p>
+<p>Download SMAK for free by clicking the "Free Download" button. SMAK is free and open-source as of version 2.0. That means SMAK is completely free and will never require you to give it money. You can even check out the <a href="https://github.com/BSVino/SMAK">source code</a> if you want.</p>
 
-<p>Mac and Linux versions will be available in the future.</p></div>
+<p>Mac and Linux versions will be available in the future.</p>
+
+</div>
 
 <?
 require_once '_footer.php';

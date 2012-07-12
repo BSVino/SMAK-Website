@@ -6,6 +6,23 @@ require_once '_header.php';
 
 <h1>Release Notes</h1>
 
+<h2>2.0.0</h2>
+
+<p>July 11, 2012</p>
+
+Improvements:
+<ul>
+<li>Significant speed improvements for rendering</li>
+<li>SMAK can now load models in about 30 different formats using <a href="http://assimp.sourceforge.net">AssImp</a>, for a full list see their <a href="http://assimp.sourceforge.net/main_features_formats.html">import formats page</a></li>
+<li>SMAK can now generate cavity maps from a model's normal map</li>
+<li>The material screen now has proper color pickers for the material properties</li>
+</ul>
+
+Fixes:
+<ul>
+<li>Lots of bugs, I lost track of how many</li>
+</ul>
+
 <h2>1.0.1</h2>
 
 <p>January 10, 2010</p>
