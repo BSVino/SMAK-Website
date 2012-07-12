@@ -1,0 +1,208 @@
+body
+{
+	background: #e8eff4 url(/bg.gif) no-repeat center top;
+	background-repeat: no-repeat;
+	margin: 0px;
+	color: #000;
+	font-family: trebuchet ms,tahoma,verdana,arial,helvetica;
+	font-size: 13px;
+}
+
+a
+{
+	color: #f94015;
+	text-decoration: none;
+	border: 0px solid black;
+}
+
+img
+{
+	border: 0px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	color: #f94015;
+}
+
+strong
+{
+	border-bottom:1px dotted #cccccc;
+}
+
+#body
+{
+	width: 979px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header
+{
+	background: #fff url(/header.png) no-repeat;
+	width: 979px;
+	height: 163px;
+}
+
+#smaklogo
+{
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+#nav
+{
+	float: right;
+	margin-top: 64px;
+	margin-right: 20px;
+	font-size: 20px;
+	text-transform: lowercase;
+}
+
+#nav>a
+{
+	color: #f94015;
+}
+
+#description
+{
+	width: 979px;
+	text-align: center;
+	background-color: #fff;
+	height: 30px;
+	font-style: italic;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#description>div
+{
+	padding-top: 5px;
+}
+
+#content
+{
+	margin: 0px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #fff;
+	padding: 15px;
+	padding-top: 0px;
+}
+
+#footer
+{
+	border-top: 1px black solid;
+	padding: 5px;
+	text-align: center;
+}
+
+#frontpromotion
+{
+	width: 979px;
+	color: #f94015;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #fff;
+	font-size: x-large;
+}
+
+#fronttwitterfeed
+{
+	float: left;
+	width: 450px;
+	margin-left: 20px;
+	margin-top: 20px;
+	padding: 20px;
+	padding-top: 0px;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+#twitter_update_list
+{
+	padding: 0px;
+	list-style-position: inside;
+}
+
+#frontvideoembed
+{
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+	width: 312px;
+	height: 259px;
+}
+
+#frontbuypanel
+{
+	float: left;
+	width: 312px;
+	height: 340px;
+	margin-left: 15px;
+	background-color: #fff;
+}
+
+#frontfeatures
+{
+	float: left;
+	background-color: #fff;
+	padding: 10px;
+	padding-left: 20px;
+	width: 615px;
+}
+
+.feature
+{
+	margin: 20px;
+	height: 90px;
+}
+
+.featureicon
+{
+	width: 75px;
+	height: 75px;
+	float: left;
+	margin-right: 25px;
+}
+
+.featureheader
+{
+	margin-bottom: 8px;
+}
+
+#frontscreenshots img
+{
+	margin: 5px;
+}
+
+.manualfloatleft
+{
+	float: left;
+	margin: 0px;
+	margin-right: 20px;
+}
+
+.manualfloatright
+{
+	float: right;
+	margin: 0px;
+	margin-left: 20px;
+}
+
+.subtext
+{
+	font-size: smaller;
+	color: #aaa;
+}
+
+.code
+{
+	font-family: monospace;
+}
