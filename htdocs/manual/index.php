@@ -130,11 +130,9 @@ se have been separated into different windows.</em></p>
 
 <h3>Ambient Occlusion Generation Options</h3>
 
-<em>Note: A license of SMAK is required to generate AO maps through batch processing. Without one, your output maps will be downsampled to 128x128.</em>
-
 <p>The arguments for generating an AO map are:</p>
 
-<p><span class="code">C:\Program Files\SMAK\&gt;smak.exe &lt;input-file&gt; --command ao [--method &lt;shadowmap|raytrace|tridistance|color&gt;] [--output &lt;filename&gt;] [--size &lt;64-2048&gt;] [--bleed &lt;0-10&gt;] [--lights &lt;500-3000&gt;] [--samples &lt;5-25&gt;] [--falloff &lt;#&gt;] [--randomize] [--crease] [--groundocclusion]</span></p>
+<p><span class="code">C:\Program Files\SMAK\&gt;smak.exe &lt;input-file&gt; --command ao [--method &lt;shadowmap|raytrace&gt;] [--output &lt;filename&gt;] [--size &lt;64-2048&gt;] [--bleed &lt;0-10&gt;] [--lights &lt;500-3000&gt;] [--samples &lt;5-25&gt;] [--falloff &lt;#&gt;] [--randomize] [--crease] [--groundocclusion]</span></p>
 
 <p>[Square brackets] mean an optional parameter and &lt;Angle brackets&gt; mean a required parameter that needs to be replaced with the proper value. Explanations of all of the parameters is below. Full descriptions of what they do can be found in the section "Generating an Ambient Occlusion Map" in this manual.</p>
 
